@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mef.Console.Application.ModuleBase\Mef.Console.Application.ModuleBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Composition.AttributedModel">
+      <HintPath>C:\Users\Alon\.nuget\packages\system.composition.attributedmodel\1.1.0\lib\netstandard2.0\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

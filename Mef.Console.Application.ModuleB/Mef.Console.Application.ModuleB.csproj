@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Composition.AttributedModel" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mef.Console.Application.ModuleBase\Mef.Console.Application.ModuleBase.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)Mef.Console.Application.ModuleB.dll&quot; &quot;$(SolutionDir)Mef.Console.Application\bin\$(ConfigurationName)\netcoreapp2.0\Modules&quot; /Y" />
+  </Target>
+
+</Project>
